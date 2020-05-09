@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+</head>
+	<body>
+	<script>
+		(function(w) {	
+			w.igniteCampaigns = w.igniteCampaigns || {};
+			var adSettings = {
+				clickthrough: 'http://townsquaremedia.com',
+				collapsedImage: '//ignitecampaigns.com/global/mobile-anchor-unit/assets/salud_320x50.jpg',
+				/* Spotify Settings */
+				spotify: 1,
+				topBanner: '//localhost/work/ignite/campaigns/ignite-campaigns/global/mobile-anchor-unit/assets/salud_320x150.jpg',
+				embedPlayer: '<iframe src="https://embed.tidal.com/player/?type=t&id=90521073" frameborder="0" allowfullscreen="true" style="width:100%;height:180px;"></iframe>',
+				embedPlayerHeight: '180px',
+				/* Google Analytics Settings */
+				gaId: 'UA-59322100-5',
+				campaignName: 'Salud',
+				previewTimeOut: 7,
+				quartilePixels:{
+					0:'http://wac.450f.edgecastcdn.net/80450F/ignitecampaigns.com/uploads/2015/04/08/transparent-pixel.png?quartile=0',
+					25:'http://wac.450f.edgecastcdn.net/80450F/ignitecampaigns.com/uploads/2015/04/08/transparent-pixel.png?quartile=25',
+					50:'http://wac.450f.edgecastcdn.net/80450F/ignitecampaigns.com/uploads/2015/04/08/transparent-pixel.png?quartile=50',
+					75:'http://wac.450f.edgecastcdn.net/80450F/ignitecampaigns.com/uploads/2015/04/08/transparent-pixel.png?quartile=75',
+					100:'http://wac.450f.edgecastcdn.net/80450F/ignitecampaigns.com/uploads/2015/04/08/transparent-pixel.png?quartile=100'
+				}
+			};
+			w.igniteCampaigns.adSettings = adSettings;
+			var b = window.document.getElementsByTagName('body')[0];
+			s = window.document.createElement('script');
+			s.type = 'text/javascript';
+			s.src = 'http://ignitecampaigns.com/global/mobile-anchor-unit/js/mau.launch.js';
+			b.appendChild( s );
+		}(window));
+	</script>
+</body>
+</html>

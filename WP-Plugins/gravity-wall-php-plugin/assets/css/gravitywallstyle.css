@@ -1,0 +1,215 @@
+.gravitywall-wrap .grav-submission {
+	position: relative;
+	float: left; 
+	width: 20%; 
+    height: auto;
+    background-size: cover;	
+	background-position: top center;
+	background-color: #dcdddf;
+}
+.gravitywall-wrap .name-rollover {
+	display: none;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0,0,0,.5);
+}
+.gravitywall-wrap .rollover-text {
+	position: absolute;
+	color: #fff!important;
+	text-align: center;
+	top: 50%;
+	width: 100%;
+	transform: translateY(-50%);
+}
+.gravitywall-wrap .grav-mobile-header {
+	display: none!important;
+}
+.grav-wall-inner-wrap {
+	background: #fff;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	width: 90%;
+	min-width: 800px;
+	max-width: 970px;
+	z-index: 9999;
+	transform: translate(-50%, -50%);
+
+}
+.grav-wall-inner-wrap h1.popup-title {
+	font-size: 2.4em;
+	padding: 20px 0 15px 0;
+}
+.grav-wall-inner-wrap p.popup-bio {
+	font-size: 1.3em;
+	line-height: 1.4em;
+	padding-right: 15px;
+	margin-bottom: 15px;
+	max-height: 240px;
+    margin-right: 15px;
+    overflow-y: auto;
+}
+.grav-wall-inner-wrap .popup-img {
+	position: relative;
+	float: left;
+	margin-right: 30px;
+	width: 400px;
+	height: 400px;
+	z-index: 99999;
+	background-size: cover;
+	background-position: top;
+}
+.grav-modalWrap {
+	display: none;
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0,0,0,.8);
+	z-index: 9999;
+}
+.grav-wall-inner-wrap .close-btn {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	width: 24px;
+	height: 24px;
+	cursor: pointer;
+	z-index: 9999;
+}
+.gravitywall-wrap span.show-form-btn {
+	display: inline-block;
+	margin: 15px 0;
+	/*padding: 10px;*/
+	color: #fff;
+	/*font-size: 2.4em;*/
+	border: 0;
+	cursor: pointer;
+
+	font-size: 1.2em; 
+	padding: 20px 75px 20px 75px; 
+	text-transform: uppercase;
+
+}
+.gravitywall-wrap .preloader {
+	padding: 40px 0 30px 0;
+	margin: 0 auto;
+	display: block;
+}
+/*gform*/
+.grav-form-wrap {
+	display: none;
+}
+.gravitywall-wrap .g-form-top {
+	text-align: right;
+	clear: both;
+}
+/*Sharing*/
+.share-title {
+	float: left;
+	font-size: 22px;
+	margin: 3px 15px 0 0;
+}
+.fbShareImg, .twShareImg, .emailShareImg {
+	width: 28px;
+	margin-right: 10px;
+}
+p.gravitywall-credits {
+	font-size: 1.2em;
+    padding-bottom: 20px;
+    font-weight: bold;
+}
+.grav-form-wrap .validation_message, .grav-form-wrap .validation_error, .grav-form-wrap .gfield_required {
+	color: red !important;
+}
+.grav-form-wrap .gform_wrapper {
+	background: none !important;
+}
+.gravitywall-wrap {
+	position: relative;
+	background: -moz-linear-gradient(left, #cbb97f 0%, #ebddb1 50%, #cbb97f 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(left, #cbb97f 0%,#ebddb1 50%,#cbb97f 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to right, #cbb97f 0%,#ebddb1 50%,#cbb97f 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cbb97f', endColorstr='#cbb97f',GradientType=1 ); /* IE6-9 */
+}
+.grav-form-wrap .gform_footer {
+	text-align: center;
+}
+.grav-form-wrap .gform_footer input {
+	font-size: 1.8em;
+	padding: 20px 75px 45px 75px !important;
+}
+.grav-form-wrap input[type=file] {
+	background: #ddd !important;
+}
+.grav-form-wrap select {
+	width: 50%!important;
+}
+.grav-form-wrap .gform_title {
+	font-size: 2em !important;
+}
+.gravitywall-wrap .tag-line {
+	position: absolute;
+	top: 265px;
+	left: 0;
+	width: 100%;
+}
+.gravitywall-wrap .tag-line .tag-wrap  {
+	padding-left: 60px;
+	padding-right: 250px;
+}
+.gravitywall-wrap .tag-line .tag-wrap p {
+	font-size: 22px !important;
+	color: #fff;
+	margin-bottom: 20px;
+	line-height: 1.2em !important;
+	text-shadow: 1px 1px 1px #333;
+}
+.gravitywall-wrap .tag-line .tag-wrap p a {
+	font-size: 22px !important;
+	text-shadow: none;
+}
+.grav-sub-success {
+	color: #fff;
+	padding: 15px;
+	font-size: 1.4em;
+}
+.gravitywall-wrap .grav-sorry {
+	padding: 30px;
+}
+.gravitywall-wrap .clear {
+	clear: both;
+}
+.gravitywall-wrap .btn-wrap {
+	text-align: center;
+}
+.loader-lg {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+/* Fade In Fade Out CSS animations */
+.visible,
+.hidden {
+  overflow: hidden;
+}
+.visible {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 2s linear;
+}
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 2s, opacity 2s linear;
+}
+.visible > div, .hidden > div {}
+.hidden > div {
+  margin-top: -10000px;
+  transition: margin-top 0s 2s;
+}

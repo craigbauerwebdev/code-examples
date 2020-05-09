@@ -1,0 +1,673 @@
+/* Desktop Podcast Player */
+html.podcast_popup {
+  min-width: 300px;
+  .ondemand-podcast-player {
+    width: 100%;
+    margin: 0 auto 30px 0;
+    .playlist-title {
+      position: sticky;
+      position: -webkit-sticky;
+      top: 0;
+      z-index: 99;
+    }
+    .player {
+      ul.playlist {
+        padding: 0 0 130px 0;
+      }
+    }
+  }
+  #container {
+    max-width: 100%;
+    min-width: 300px;
+  }
+}
+.podcast-player-loader {
+  position: relative;
+  height: 50px;
+}
+.ondemand-podcast-player {
+  width: 560px;
+  margin: 0 auto 30px auto;
+  .cto-container {
+    width: 560px;
+    margin: 1px auto 0 auto;
+    cursor: pointer;
+    .cto {
+      background-color: #808183;
+    }
+  }
+  .playlist-title {
+    text-align: left;
+    background-color: $primary-color;
+    h2 {
+      color: $white;
+      margin: 0;
+      font-size: 14px;
+      padding: 15px;
+      font-weight: bold;
+      line-height: 16px;
+    }
+  }
+  .player {
+    overflow: hidden;
+    background: url( "/public/assets/img/podcastplayer/player-bkg.jpg" );
+    background-size: cover;
+    background-position: top;
+    background-attachment: fixed;
+    .adhesion-player {
+      background: #141414;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 163px;
+      z-index: 9999999999999;
+      .simple-progress-bar {
+        height: 3px;
+        position: relative;
+        background: $white;
+        .progress {
+          background: $primary-color;
+          position: absolute;
+          left: 0;
+          top: 0;
+          bottom: 0;
+          width: 60%;
+        }
+      }
+      .current-track-controls {
+        position: absolute;
+        top: 3px;
+        left: 0;
+        width: 100%;
+        height: 100px;
+        cursor: pointer;
+        .thumbnail {
+          width: 70px;
+          height: 70px;
+          position: absolute;
+          top: 50%;
+          left: 20px;
+          transform: translateY(-50%);
+          background-position: top;
+          background-size: cover;
+        }
+        .title-wrap {
+          position: absolute;
+          left: 100px;
+          right: 110px;
+          top: 50%;
+          transform: translateY(-50%);
+          text-align: left;
+          h2 {
+            color: $white;
+            font-size: 14px;
+            line-height: 14px;
+          }
+        }
+        .controls {
+          position: absolute;
+          top: 50%;
+          right: 10px;
+          width: 85px;
+          transform: translateY(-50%);
+          .circle {
+            fill: $primary-color;
+          }
+          .inner {
+            fill: $primary-color;
+          }
+          .number {
+            fill: $white;
+          }
+          .play-pause {
+            float: left;
+            margin-right: 15px;
+          }
+          .skip-forward {
+            float: left;
+            padding-top: 10px;
+          }
+        }
+      }
+      .player-bottom {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 60px;
+        width: 100%;
+        background: #1b1b1b;
+        width: 100%;
+        .inner {
+          background: orange;
+          width: 320px;
+          height: 50px;
+          margin: 0 auto;
+          margin-top: 5px;
+          h3 {
+            color: $white;
+            font-size: 22px;
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+          } 
+        }
+      }
+    }
+    .clearfix::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+    .date, .hosted-by {
+      font-size: 14px;
+      color: #c7c1bf;
+    }
+    .host-name {
+      color: $primary-color;
+    }
+    font-family: $font-family-condensed;
+    text-align: center;
+     
+    h2.top-title {
+      /* white-space: nowrap; */
+      color: #eee;
+      margin: 30px;
+      margin: 30px;
+      font-size: 20px;
+      line-height: 22px;
+    }
+    .playlist-wrapper {
+      position: relative;
+    }
+    .slide-in {
+      position: absolute;
+      top: 0;
+      left: 100%;
+      width: 100%;
+      animation: .5s ease 0s slidein forwards;
+    }
+    @keyframes slidein {
+      from { 
+        left: 100%; 
+      }
+      to {
+        left: 0;
+      }
+    }
+    .slide-out {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      animation: .5s ease 0s slideout forwards;
+    }
+    @keyframes slideout {
+      from { 
+        left: 0; 
+      }
+      to {
+        left: 100%;
+      }
+    }
+    .slide-up {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      animation: .5s ease 0s slideup forwards;
+    }
+    @keyframes slideup {
+      from { 
+        top: 100%; 
+      }
+      to {
+        top: 0;
+      }
+    }
+    .slide-down {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      animation: .5s ease 0s slidedown forwards;
+    }
+    @keyframes slidedown {
+      from { 
+        top: 0; 
+      }
+      to {
+        top: 100%;
+      }
+    }
+    .podcast-details {
+      position: fixed;
+      top: 0;
+      bottom: 163px;
+      left: 80%;
+      width: 100%;
+      z-index: 999999999999;
+      background: #ededed;
+      background-position: top;
+      background-size: cover;
+      .inner-content {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 15px;
+        p {
+          margin: 0;
+          color: $white;
+          span {
+            color: $primary-color;
+          }
+        }
+        .thumbnail {
+          float: left;
+          text-align: initial;
+          img {
+            width: 125px;
+            height: auto;
+            float: left;
+            margin-right: 15px;
+          }
+        }
+        .top-meta {
+          float: right;
+          width: calc(100% - 140px);
+          .track-meta {
+            margin: 5px 0;
+            .date, .dur-min { 
+              font-size: 12px;
+              margin: 0;
+              color: #45444a;
+            }
+            .date {
+              float: left;
+            }
+            .dur-min {
+              float: right;
+            }
+          }
+          h2 {
+            color: $black;
+            margin-bottom: 15px;
+            font-size: 14px;
+            line-height: 15px;
+          }
+          img {
+            width: 35px;
+            height: auto;
+            margin-top: 15px;
+          }
+          .circle, .inner {
+            fill: $primary-color;
+          }
+          text-align: left;
+        }
+        p.description {
+          color: #45444a;
+          font-size: 14px;
+          line-height: 26px;
+          clear: both;
+          text-align: left;
+          padding-top: 15px;
+        }
+        .bottom-meta {
+          font-size: 14px;
+          line-height: 17px;
+          padding-top: 15px;
+          p {
+            margin-bottom: 8px;
+            color: $primary-color;
+          }
+          p.label {
+            float: left;
+            width: 60px;
+            color: $black; 
+          }
+          text-align: left;
+          clear: both;
+        }
+        p.details-title {
+          color: $white;
+          text-align: left;
+          font-size: 22px;
+        }
+        .close-btn {
+          width: 25px;
+          margin: 0px 0 40px 0;
+          cursor: pointer;
+        }
+      }
+      .playing-now-icons {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        .playing-now {
+          float: right;
+          background: $primary-color;
+          color: $white;
+          margin-left: 10px;
+          font-size: 12px;
+          padding: 1px 3px;
+          line-height: 20px;
+        }
+      }
+    }
+    .podcast-now-playing-details {
+      position: fixed;
+      top: 75%;
+      left: 0;
+      width: 100%;
+      height: calc(100% - 60px);
+      padding: 0 30px;
+      z-index: 99;
+      background: url( "/public/assets/img/podcastplayer/gradient-bkg-now-playin.jpg" );
+      background-color: $black;
+      background-position: top;
+      background-size: cover;
+      .close-btn {
+        width: 25px;
+        color: $primary-color;
+        font-size: 24px;
+        margin: 0px 0 40px -15px;
+        cursor: pointer;
+        text-align: left;
+      }
+      .thumbnail {
+        width: 130px;
+        margin: 0 auto;
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+      .details-title {
+        color: $white;
+        font-size: 18px;
+        line-height: 18px;
+        margin: 10px 0;
+      }
+      .description {
+        color: $white;
+        font-size: 14px;
+        line-height: 14px;
+        margin: 5px 0 15px 0;
+      }
+      .bottom-meta {
+        position: absolute;
+        width: calc(100% - 60px);
+        left: 30px;
+        bottom: 30px;
+      }
+      .subscribe-icons {
+        text-align: center;
+        padding-top: 40px;
+        img {
+          max-width: 300px;
+        }
+      }
+      .controls {
+        position: relative;
+        text-align: center;
+        height: 60px;
+        .play-pause {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 50px;
+          height: 50px;
+          margin: 0;
+        }
+        .prev, .next {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          width: 25px;
+          height: 25px;
+        }
+        .prev {
+          right: calc(50% + 60px);
+        }
+        .next {
+          left: calc(50% + 60px);
+        }
+        .circle, .inner {
+          fill: $primary-color;
+        }
+        .number {
+          fill: $white;
+        }
+      }
+      .progress {
+        margin: 10px 0 20px;
+        .lapsed, .bar, .duration {
+          font-family: $font-family-condensed;
+          display: inline-block;
+          color: #ccc;
+          font-size: 12px;
+        }
+        .lapsed {}
+        .bar {
+          position: relative;
+          margin: 0 15px 3px 15px;
+          max-width: 370px;
+          width: calc(75% - 60px);
+          .input-range {
+            -webkit-appearance: none;
+            width: calc(100% - 15px);
+            max-width: 360px;
+            height: 5px;
+            border-radius: 5px;
+            background: #555;
+            outline: none;
+          }
+          .input-range::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: $white;
+            cursor: pointer;
+          }
+          .input-range::-webkit-slider-thumb:hover {
+            background: $white;
+          }
+          .input-range:active::-webkit-slider-thumb {
+            background: $white;
+          }
+          .input-range::-moz-range-thumb {
+            width: 20px;
+            height: 20px;
+            border: 0;
+            border-radius: 50%;
+            background: $white;
+            cursor: pointer;
+          }
+          .input-range::-moz-range-thumb:hover {
+            background: $white;
+          }
+          .input-range:active::-moz-range-thumb {
+            background: $white;
+          }
+          .input-range::-moz-range-progress {
+            background: $primary-color; 
+          }
+          .input-range::-moz-range-track {
+            background: $black;
+            border: 0;
+          }
+          input::-moz-focus-inner {
+            border: 0;
+          }
+        }
+      }
+    }
+    ul.playlist {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      li {
+        position: relative;
+        cursor: pointer;
+        .info {
+          text-align: left;
+          position: relative;
+          padding: 10px 20px 20px 20px;
+          border-bottom: 1px #888 solid;
+          .title-desc-wrap {
+            position: relative;
+            .title-desc {
+              float: left;
+              width: calc( 100% - 45px );
+              h3.title {
+                font-weight: bold;
+                color: $white;
+                margin: 0 0 5px 0;
+                font-size: 13px;
+                line-height: 13px;
+              }
+              p.description {
+                font-size: 12px;
+                line-height: 18px;
+                margin: 0 0 10px 0;
+                font-weight: light;
+                color: #aaa;
+              }
+            }
+            .play-status {
+              position: relative;
+              float: right;
+              width: 30px;
+              height: 30px;
+              //margin-top: 8px;
+              margin-top: 0;
+              #playicon {
+                width: 30px;
+                position: absolute;
+                top: 0;
+                right: 0; 
+              }
+              .circle {
+                fill: $primary-color;
+              }
+              .inner {
+                fill: $primary-color;
+              }
+              .path {
+                stroke: $primary-color;
+              }
+            }
+          }
+        }
+        .track-meta {
+          margin: 3px 0 5px 0;
+          .podcast-details-btn {
+            color: $primary-color;
+            font-size: 12px;
+          }
+          .date, .dur-min { 
+            font-size: 12px;
+            margin: 0;
+            color: #bbbfca;
+          }
+          .date {
+            float: left;
+          }
+          .dur-min {
+            float: right;
+          }
+        }
+        .progress {
+          .lapsed, .bar, .duration {
+            color: #868695;
+          }
+          .lapsed {
+
+          }
+          .bar {}
+        }
+        .playing-now-icons {
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          .playing-now {
+            float: right;
+            background: $primary-color;
+            color: $white;
+            margin-left: 10px;
+            font-size: 12px;
+            padding: 1px 3px;
+            line-height: 20px;
+          }
+          .sound-icon {
+            display: block;
+            width: 15px;
+            margin-top: 5px;
+          }
+        }
+      }
+    }
+    ul.playlist.inarticle {
+      li {
+        .info {
+          h3 {
+            font-size: 14px;
+            line-height: 14px;
+          }
+        }
+      }
+    }
+  }
+}
+.ondemand-podcast-player.light-theme {
+  .player {
+    background: rgba(255, 255, 255, 1);
+    h2 {
+      color: $black;
+    }
+    .date, .hosted-by {
+
+    }
+    .progress {
+      .bar {
+        .input-range {
+          background: #ddd;
+        }
+      }
+    }
+    ul.playlist {
+      background: $white;
+      li.primary-color-style {
+        background: #d3d3d3;
+      }
+      li {
+        background: #ededed;
+        border-bottom: $white solid 1px;
+        .info {
+          padding: 5px 20px 10px 20px;
+          border-bottom: none;
+          .track-meta {
+            .date, .dur-min {
+              color: #808183;
+            } 
+          }
+          .title-desc-wrap {
+            .title-desc {
+              h3.title {
+                color: $black;
+              }
+              .description {
+                color: #808183;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

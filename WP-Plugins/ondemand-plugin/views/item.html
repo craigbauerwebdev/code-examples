@@ -1,0 +1,11 @@
+<div class="ondemand-item ui-state-default">
+	<h2>Movie <span class="movie-index">{{index}}</span><input type="button" class="ondemand-delete button button-primary button-small" value="Delete" /></h2>
+	<p>
+		<label for="ondemand-{{x}}-title" class="ondemand-row-title">Title</label><br />
+		<input type="text" name="ondemand[{{x}}][title]" id="ondemand-{{x}}-title" class="ondemand-input" value="{{title}}" />
+	</p>
+	<p>
+		<label for="ondemand-{{x}}-url" class="ondemand-row-title">Url</label><br />
+		<input type="text" name="ondemand[{{x}}][url]" id="ondemand-{{x}}-url" class="ondemand-input" value="{{url}}" />
+	</p>
+</div>

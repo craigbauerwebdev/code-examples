@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Test Sprite Animation</title>
+<style>
+  #wrapper {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    background: red;
+    text-align: center;
+    color: #fff;
+  }
+</style>
+</head> 
+  <body>
+    <div id="wrapper">
+      <h1>Responsive CSS3 Animation</h1>
+      <div id="video"></div>
+      <div>Footer</div>
+    </div>
+    <script src="js/jquery.js"></script>
+    <!-- Load Plugin -->
+    <script src="js/sprite.plugin.js"></script>
+    <!-- Init Sprite animation -->
+    <script> 
+    (function(w){
+      var sprite = new w.igniteCampaigns.SpriteAnimation({
+        spriteContainer: '#video',
+        spriteImg: '//ignitecampaigns.com/uploads/2017/12/07/v2_13231004_lufkin_army_sprite.jpg',
+        frameWidth: 250,
+        frameHeight: 141,
+        rows: 2,
+        cols: 32,
+        animationTime: 10,
+        topOffset: 0%
+      });
+      sprite.code();
+      self.sprite = sprite;
+      return self;
+    }(window));
+  </script>
+  </body>
+</html>

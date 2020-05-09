@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head></head>
+	<body>
+		<script>
+			(function(w) {
+				w.igniteCampaigns = w.igniteCampaigns || {};
+				w.top.igniteCampaigns = w.top.igniteCampaigns || {};
+				var adSettings = {
+					clickthrough: 'http://www.goarmy.com/benefits/money/bonuses-earning-extra-money.html',
+					disableSlideIn: 1,
+					bottomBanner: '//ignitecampaigns.com/uploads/2018/01/18/army-bar_2.png',
+					imgTop: '//ignitecampaigns.com/uploads/2017/12/07/v2_13231004_lufkin_army_top.jpg',
+					imgBottom: '//ignitecampaigns.com/uploads/2017/12/07/v2_13231004_lufkin_army_bottom.jpg',
+					ytId : 'uJSjYZWNtVw',
+					useSprite: true,
+					spriteContainer: '.vThumb',
+					spriteImg: '//ignitecampaigns.com/uploads/2017/12/07/v2_13231004_lufkin_army_sprite.jpg',
+					frameWidth: 250,
+					frameHeight: 141,
+					rows: 2,
+					cols: 32,
+					animationTime: 10,
+					topOffset: '0%',
+					clickToCall: false,
+					phoneNum: '9175384365',
+					gaId: 'UA-59322100-5',
+					campaignName: 'Campaign Name',
+					quartilePixels:{
+						0:'http://wac.450f.edgecastcdn.net/80450F/ignitecampaigns.com/uploads/2015/04/08/transparent-pixel.png?quartile=0',
+						25:'http://wac.450f.edgecastcdn.net/80450F/ignitecampaigns.com/uploads/2015/04/08/transparent-pixel.png?quartile=25',
+						50:'http://wac.450f.edgecastcdn.net/80450F/ignitecampaigns.com/uploads/2015/04/08/transparent-pixel.png?quartile=50',
+						75:'http://wac.450f.edgecastcdn.net/80450F/ignitecampaigns.com/uploads/2015/04/08/transparent-pixel.png?quartile=75',
+						100:'http://wac.450f.edgecastcdn.net/80450F/ignitecampaigns.com/uploads/2015/04/08/transparent-pixel.png?quartile=100'
+					} 
+				}; 
+				w.top.igniteCampaigns.adSettings = adSettings;
+				w.igniteCampaigns.adSettings = adSettings;
+				var b = window.document.getElementsByTagName('body')[0];
+				s = window.document.createElement('script');
+				s.type = 'text/javascript';
+				s.src = '//ignitecampaigns.com/global/mobile-topper/js/mobile.topbanner.launch.js';
+				b.appendChild( s );
+			}(window));
+		</script>
+	</body>
+</html>

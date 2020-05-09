@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head></head>
+	<body>
+		<script>
+			(function(w) {
+				w.igniteCampaigns = w.igniteCampaigns || {};
+				w.top.igniteCampaigns = w.top.igniteCampaigns || {};
+				var adSettings = {
+					clickthrough: 'http://townsquaremedia.com',
+					disableSlideIn: 1,
+					topBannerImg: '//ignitecampaigns.com/uploads/2018/01/18/snow-top.png',
+					dockedBanner: '//ignitecampaigns.com/uploads/2018/01/18/snow-bar.png',
+					exploreColor: '#ec3432',
+					exploreBkgColor: '#fff',
+					imgTop: '//ignitecampaigns.com/uploads/2018/01/18/snow-expand.png',
+					clickToCall: false,
+					phoneNum: '9175384365',
+					gaId: '{GA-ID}',
+					campaignName: 'Campaign Name',
+					quartilePixels:{
+						0:'http://wac.450f.edgecastcdn.net/80450F/ignitecampaigns.com/uploads/2015/04/08/transparent-pixel.png?quartile=0',
+						25:'http://wac.450f.edgecastcdn.net/80450F/ignitecampaigns.com/uploads/2015/04/08/transparent-pixel.png?quartile=25',
+						50:'http://wac.450f.edgecastcdn.net/80450F/ignitecampaigns.com/uploads/2015/04/08/transparent-pixel.png?quartile=50',
+						75:'http://wac.450f.edgecastcdn.net/80450F/ignitecampaigns.com/uploads/2015/04/08/transparent-pixel.png?quartile=75',
+						100:'http://wac.450f.edgecastcdn.net/80450F/ignitecampaigns.com/uploads/2015/04/08/transparent-pixel.png?quartile=100'
+					}
+				}; 
+				w.top.igniteCampaigns.adSettings = adSettings;
+				w.igniteCampaigns.adSettings = adSettings;
+				var b = window.document.getElementsByTagName('body')[0];
+				s = window.document.createElement('script');
+				s.type = 'text/javascript';
+				s.src = '//ignitecampaigns.com/global/mobile-topper/js/mobile.topper.launch.js';
+				b.appendChild( s );
+			}(window));
+		</script>
+	</body>
+</html>

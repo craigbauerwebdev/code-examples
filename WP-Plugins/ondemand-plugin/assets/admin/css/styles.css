@@ -1,0 +1,35 @@
+.ui-state-default.ondemand-item{
+	background: #fff;
+	padding: 10px 0;
+	border: 0;
+}
+.ondemand-item h2{
+	cursor: move;
+}
+.ondemand-item h2:before {
+	content: "\002195";
+	vertical-align: middle;
+	margin-right: 10px;
+}
+.ondemand-item-highlight{
+	background-color: #fcfcfc;
+	height: 215px;
+	width: 100%;
+}
+#ondemand_meta {
+	padding-bottom: 15px;
+}
+.ondemand-row-title {
+	font-weight: bold;
+}
+.ondemand-input {
+	width: 100%; 
+	padding: 8px;
+}
+.tile {
+	background: red;
+}
+.ondemand-delete {
+	float: right;
+	margin-top: 120px;
+}

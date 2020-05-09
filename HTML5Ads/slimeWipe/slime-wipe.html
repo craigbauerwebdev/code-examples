@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>	
+			* {
+			margin:0; padding:0;
+			}
+			.cell {
+				display: table-cell;
+				vertical-align: middle;
+				text-align: center;
+			}
+			.cell canvas {
+				vertical-align: middle;
+			}
+			.canthumb {
+				border: 0px solid #222;
+			}
+			#main { 
+				margin:0 auto;
+				width:100%;
+				height: 100%;
+				text-align: center;
+			}
+			#maincanvas {
+				border: 0px solid #222;
+				cursor: pointer;
+				margin:0 auto;
+				background: transparent;
+				text-align: center;
+				display: block;
+			}
+		</style>
+	</head>
+		<body>
+			<div id="main">
+				<div>
+					<canvas id="maincanvas"></canvas>
+				</div>
+			</div>
+		<script>	
+			var adSettings = {
+				clickthrough: 'http://townsquaremedia.com',
+				imgTop: '/assets/slime.jpg', //image to be wiped away
+				imgBot: '/assets/underneath.jpg', //image underneath
+				gaId: '[Google Analytics Id]',
+				campaignName: 'Nikelodian',
+				timeOut: 10000, //time till ad clears itself
+			};
+		</script>
+		<script src="http://ignitecampaigns.com/global/js/jquery-2.1.1.min.js"></script>
+		<script src="http://ignitecampaigns.com/global/slimeWipe/js/slime-wipe.js"></script>
+	</body>
+</html>

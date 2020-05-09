@@ -1,0 +1,43 @@
+.profile-img {
+  background: red;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  
+
+}
+.peep {
+  background: #f2f5f6;
+  background: -moz-linear-gradient(top, #f2f5f6 0%, #e3eaed 37%, #c8d7dc 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #f2f5f6 0%,#e3eaed 37%,#c8d7dc 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #f2f5f6 0%,#e3eaed 37%,#c8d7dc 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f5f6', endColorstr='#c8d7dc',GradientType=0 ); /* IE6-9 */
+  font-family: 'Roboto', sans-serif;
+  clear: left;
+  font-size: 1.6em;
+  padding: 30px;
+  border-bottom: 1px #000 solid;
+
+}
+.left {
+	float: left;
+}
+.right {
+	float: right;
+}
+.clear {
+	clear: both;
+}
+.profile-name {
+	margin: 10px 0 0 15px;
+}
+.profile-points {
+	margin: 10px 0 0 0;
+}
+.button {
+	font-size: .8em;
+	color: #fff;
+	padding: 5px;
+	background: orange;
+	margin: 5px 0;
+}

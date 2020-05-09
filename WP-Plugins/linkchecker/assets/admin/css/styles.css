@@ -1,0 +1,29 @@
+#broken-link-error {
+	border-left: 4px #dd3d36 solid;
+	background: #fff;
+	padding:15px;
+}
+#broken-link-error .error-message-btns {
+	margin-top: 10px;
+}
+.broken-urls {
+	margin: 15px 0 15px 10px;
+}
+.broken-urls a {
+	color: #1b8be0;
+	font-weight: bold;
+}
+#link-checker-spinner {
+	float: left;
+	width: 30px;
+	height: 30px;
+	background: url(/wp-content/themes/townsquare3/img/ajax-loader.gif) no-repeat center center;
+	background-size: 30px 30px;
+	padding-right: 10px;
+}
+#save-draft-no-warning {
+	background: #dd3d36;
+    color: #fff;
+    margin-right: 15px;
+    border: red;
+}
