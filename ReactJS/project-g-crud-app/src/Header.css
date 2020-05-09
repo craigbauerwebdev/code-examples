@@ -10,35 +10,26 @@ header .site-logo {
 	width: 70%;
 	max-width: 500px;
 }
-
 header .settings-icon {
 	position: absolute;
 	top: 27px;
 	right: 20px;
 	width: 40px;
 	cursor: pointer;
-	/*right: 30px;*/
-	/*transform: translateY(-50%);*/
-	/*top: 30px;*/
 }
-
 header .add-icon {
-	/*display: inline-block;
-	margin: -5px 15px 0 10px;*/
 	position: absolute;
 	top: 0px;
 	right: 90px;
 	font-size: 2em;
 	cursor: pointer;
 }
-
 .addUserForm input {
 	font-size: 1em;
 	padding: 5px;
 	margin-bottom: 10px;
 	width: calc(100% - 10px);
 }
-
 /*Add New User Modal*/
 .add-new-user-btn {
 	background: #073277;
@@ -47,4 +38,3 @@ header .add-icon {
 	color: #fff;
 	cursor: pointer;
 }
-

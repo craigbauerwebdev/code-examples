@@ -235,7 +235,6 @@ class TsmAmp {
 		$json["sitetype"] = $sitetype;
 		$json["market"] = $market;
 		$json["callletters"] = $call;
-		/*$json["device"] = 'web';*/
 		$json["id"] = $postSlug;
 		$json["genre"] = $genres;
 		$json["right"] = "top";
