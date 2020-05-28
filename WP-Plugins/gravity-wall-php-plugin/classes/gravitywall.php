@@ -23,7 +23,7 @@ class GravityWall{
 
         $router->add_route('gravitywall_endpoint', $args);
     }
-    public function handle_request() { // member function?
+    public function handle_request() {
     	$blog_id = get_current_blog_id();
     	$tabel = 'ts_'.$blog_id.'_rg_lead_detail';
     	$tabel_long = 'ts_'.$blog_id.'_rg_lead_detail_long';
@@ -31,7 +31,6 @@ class GravityWall{
     	$seniorObj = array();
     	$formid = $_GET['id'];
     	$formnum = $formid;
-    	// form meta
 		$gformMeta = RGFormsModel::get_form_meta( $formnum );
 		$adminLabels = array();
 		foreach( $gformMeta['fields'] as $meta) {
@@ -202,11 +201,9 @@ class GravityWall{
 		}
 	}
 
-	/* Start Static Singleton */
 	protected static $instance;
 	public static function init() { static::$instance = self::get_instance(); }
 	public static function get_instance() { if ( !is_a(static::$instance, __CLASS__) ) { static::$instance = new static; } return static::$instance; }
 	final public function __clone() { trigger_error("No cloning allowed!", E_USER_ERROR); }
 	final public function __sleep() { trigger_error("No serialization allowed!", E_USER_ERROR);}
-	/* End Static Singleton */
 }

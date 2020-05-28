@@ -29,7 +29,6 @@
 		}
 		
 	}
-	//console.log("Publish Delay: ", publishDelay);
 
 	var LinkChecker = function(settings){
 		var events = {
@@ -103,19 +102,13 @@
 						}
 						iFrameContents = lc.stringToHTML(iframeContent[0].innerHTML);
 						links = iFrameContents.getElementsByTagName("a");
-						//console.log("From WYSIWYG: ", links);
 						//get button shortcodes
 						while((match = shortcodes.exec(iFrameContents.innerHTML)) != null){
-							//console.log(match);
 							var href;
-							//console.log(match[0].match(/href="([^"]*)/));
-							//console.log(match[0].match(/href='([^']*)/));
 							if(match[0].includes("[button")) {
 								if(match[0].match(/href="([^"]*)/)) {
-									//console.log('double quotes');
 									href = match[0].match(/href="([^"]*)/)[1];
 								} else if(match[0].match(/href=\'([^\']*)/)) {
-									//console.log('single quotes');
 									href = match[0].match(/href=\'([^\']*)/)[1];
 								}
 								shortCodesArray.push([ "Button Shortcode ", href, "#wp-content-editor-tools", "" ]);
@@ -124,8 +117,6 @@
 					} else {
 						var theContent = lc.stringToHTML(textArea.value);
 						links = theContent.getElementsByTagName("a");
-						//console.log("From Text: ", links);
-						//get button shortcodes
 						while((match = shortcodes.exec(theContent.innerHTML)) != null){
 							console.log(match);
 							var href;
@@ -133,7 +124,6 @@
 								if(match[0].match(/href="([^"]*)/)) {
 									href = match[0].match(/href="([^"]*)/)[1];
 								} else if(match[0].match(/href='([^\']*)/)) {
-									//console.log("checking single quotes from text tab");
 									href = match[0].match(/href='([^\']*)/)[1];
 								}
 								shortCodesArray.push([ "Button Shortcode ", href, "#wp-content-editor-tools", "" ]);
@@ -142,17 +132,13 @@
 					}
 					// List Posts
 					if(document.querySelector('.enable_button').checked){
-						//console.log('is a list post');
-						// do list post stuff
 						$('.data_list_items').children('.postbox').each(function(i) {
 							$(this).removeClass('closed');
 							var postBoxRef = i,
 							postBoxRefOffset = i + 1;
 							if(lc.listPostType($(this), '.type_standard_list_fields')){						
-								// Check Text Fields
 								$(this).find('.type_standard_list_fields').each(function(){
 									$(this).find("input[type='text']").each(function(i, elem){
-										//console.log(i, $(this).val());
 										if(i === 2 || i === 4 || i === 6) {
 											if($(this).val() != "") {
 												var label, selector, location;
@@ -281,7 +267,6 @@
 						}
 						//Footer Content
 						var FooteriFrameExists = document.getElementById('list_footer_content_ifr');
-						//console.log("Footer iFrame: ", FooteriFrameExists);
 						if(FooteriFrameExists){
 							var footerIframe = $('#list_footer_content_ifr').contents().find('body').html(),
 							footerIframeContent = lc.stringToHTML(footerIframe),
@@ -298,7 +283,6 @@
 							}
 							if(footerLink) {
 								if( footerLink.startsWith("#") || footerLink.startsWith("app://") || footerLink === "" || footerLink.includes("attachment_id")) {
-									//do nothing
 								} else if ( footerLink.startsWith('/') ) {
 									listPostUrls.push([footerLabel, host + footerLink, '.sec-footer', ' (List Post Footer Description)' ]);
 								} else {
@@ -385,13 +369,11 @@
 		            data : { action: "check_for_broken_urls", allurls: urls },
 		           	timeout : 90000,
 		            success: function(response) {
-		            	//console.log(response);
 		            	requestCount ++;
 		            	lc.getBustedUrls(response, postStatus);
 		            	publish.removeClass('disabled');
 		            },
 		            error: function(response) {
-		            	//console.log(response);
 		            	console.log("Server Response Error");
 		            	lc.handleResponseError();
 		            	checking = false;
@@ -416,7 +398,6 @@
 						$(this).removeClass('closed');
 						var postBoxRef = i;
 						if(lc.listPostType($(this), '.type_standard_list_fields')){						
-							// Check Text Fields
 							$(this).find('.type_standard_list_fields').each(function(){
 								$(this).find("input[type='text']").each(function(i, elem){
 									if(i === 2 || i === 4 || i === 6) {
@@ -526,7 +507,6 @@
 			},
 			handleDraftWarning: function(cvalue) {
 				lc.addClasses();
-				//console.log('cookie: ', cvalue);
 				$('.status-banner').append(
 				'<div id="broken-link-error">\
 					<h3>\
@@ -556,8 +536,6 @@
 						<b>Publishing live will be disabled</b> until these urls are resolved.\
 						<div class="broken-urls">' + res.join("<br/>") + '</div>\
 					</div>');
-					//need to pass a 2nd arg of superadmin
-					//console.log(saveDraft);
 					if(saveDraft.length > 0) {
 						$('#broken-link-error').append(
 							'<b>Please Note:</b> Your changes have not been saved. Click the <b>"Save Draft"</b> button below to save draft or click the <b>"Publish Anyway"</b> button if you have verified the links and want to proceed with caution.<br />\
@@ -570,11 +548,6 @@
 							<div class="error-message-btns"><button id="publish-anyway" class="button">Publish Anyway</button></div>'
 						);
 					}
-					//if(superAdmin){
-					/*$('#broken-link-error').append(
-						'<button id="publish-anyway" class="button">Publish Anyway</button>'
-					);*/
-					//}
 					$("html,body").animate({
 						scrollTop: 0
 					}, scrollSpeed);
