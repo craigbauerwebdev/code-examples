@@ -6,5 +6,7 @@ Ad units created in JS and Jquery with various other technologies.
 A custom search script to search blog posts on certain pages
 # ReactJS
 Components created to add features to the web platform that power 600+ blogs and thousands of posts, pages and othe custom content types.
+# SASS
+Style sheets done in basic SASS.
 # WP-Plugins
 Custom WordPress plugins crearted to customize the cms plaform the powered the ReactJS frontend.
